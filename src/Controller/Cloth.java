@@ -10,6 +10,9 @@ public class Cloth {
 
     private String material;
     private double price;
+    private String name;
+
+
 
     //ToDo: Konstruktor hinzufügen, der alle Daten annimmt.
     //Eine Art Methode, die bei Instanziierung eines Objektes dieser Klasse
@@ -20,12 +23,27 @@ public class Cloth {
     public Cloth( String material, double price ){
         this.material = material;
         this.price = price;
+        this.name = "Cloth";
     }
 
     public Cloth( double price ){
         this.material = "Baumwolle";
         this.price = price;
+        this.name = "Cloth";
     }
+
+    public Cloth( String name,  String material, double price ){
+        this.name = name;
+        this.material = material;
+        this.price = price;
+    }
+
+    public Cloth(  double price, String name ){
+        this.name = name;
+        this.price = price;
+        this.material = "Baumwolle";
+    }
+
 
     //Getter
     public String getMaterial(){
@@ -49,6 +67,14 @@ public class Cloth {
         }
 
         this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
 }
